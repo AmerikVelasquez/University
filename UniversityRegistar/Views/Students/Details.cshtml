@@ -1,0 +1,10 @@
+@model UniversityRegistar.Models.Student
+
+<h2>Student Details</h2>
+
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.YearEnrolled): @Html.DisplayFor(model => model.YearEnrolled)</h3>
+
+<p>@Html.ActionLink("Edit Student", "Edit", new { id = Model.StudentId})</p>
+<p>@Html.ActionLink("Delete Student", "Delete", new { id = Model.StudentId})</p>
+<p>@Html.ActionLink("Back to list", "Index")</p>

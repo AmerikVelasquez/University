@@ -1,0 +1,14 @@
+@using UniversityRegistar.Models;
+@model List<UniversityRegistar.Models.Student>;
+
+<h1>Students</h1>
+@if (@Model.Count ==0)
+{
+  <h3> No Students have enrolled in the School </h3>
+}
+@foreach (Student student in Model)
+{
+  <li>@Html.ActionLink($"{student.Name}", "Details", new {id = student.StudentId})</li>
+}
+<p>@Html.ActionLink("new student", "Create")</p> 
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

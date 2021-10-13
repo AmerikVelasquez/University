@@ -1,0 +1,17 @@
+@model UniversityRegistar.Models.Student
+<h3> New Student?</h3>
+
+@using(Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model=>model.Name)
+  @Html.LabelFor(model => model.YearEnrolled)
+  @Html.TextBoxFor(model => model.YearEnrolled, 
+  new {@type="number", required = "required"})
+  @Html.Label("Select Course")
+  @Html.DropDownList("CourseId")
+  @Html.Label("Select Department")  @*This dont work*@
+  @Html.DroDownList("DepartmentId")
+  <input type ="submit" value = "add new student"/>
+}
+<p>@Html.ActionLink("Show Students", "Index")</p>

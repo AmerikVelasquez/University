@@ -1,0 +1,10 @@
+@model UniversityRegistar.Models.Student
+
+<h2>Delete Student</h2>
+
+@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+@using(Html.BeginForm())
+{
+  <input type= "submit" value ="Delete" />
+}
+<p>@Html.ActionLink("Students", "Index")</p>
